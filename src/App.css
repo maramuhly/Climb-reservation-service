@@ -1,0 +1,305 @@
+.main-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  text-align: center;
+  padding-top: 50px;
+  box-sizing: border-box;
+}
+
+/* Header */
+
+.header {
+  background-color: #333;
+  color: #fffacd;
+  padding: 10px 0;
+  text-align: center;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+}
+
+/* Home */
+
+.home button, .brand-selection button, .edit-reservation button, .reservation-check button {
+  background-color: #f8f8f2;
+  color: rgb(31, 30, 30);
+  cursor: pointer;
+  margin: 10px;
+  padding: 8px 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+/* BrandSelection */
+
+.brand-selection {
+  text-align: center;
+  padding: 20px;
+}
+
+.brand-selection h1 {
+  margin-bottom: 20px;
+}
+
+.gyms-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-top: 50px;
+}
+
+.gym {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.gym img {
+  width: 140px;
+  height: auto;
+  border-radius: 50%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 10px;
+}
+
+.gym:hover {
+  transform: scale(1.1);
+}
+
+.gym p {
+  margin: 0;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+/* EditReservation */
+
+.edit-reservation label {
+  margin-top: 20px;
+  font-weight: bold;
+}
+
+.reservation-info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.reservation-item {
+  background-color: #fffce0;
+  padding: 10px 15px;
+  border-radius: 15px;
+  font-weight: bold;
+}
+
+.error {
+  color: red;
+}
+
+.button-group {
+  display: flex;
+  gap: 10px;
+}
+
+.confirm-button, .edit-button, .delete-button {
+  background-color: #f8f8f2;
+  border: none;
+  border-radius: 15px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.confirm-button:hover, .edit-button:hover, .delete-button:hover {
+  background-color: #f8f8f2;
+}
+
+/* ParkRecommendation */
+
+.park-recommendation h2 {
+  margin-bottom: 20px;
+}
+
+.parks-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.park-card {
+  background-color: #fcfbf1;
+  border: 2px solid #f1eed7;
+  border-radius: 15px;
+  width: 300px;
+  text-align: left;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.park-card:hover {
+  transform: scale(1.05);
+}
+
+.card-header {
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+}
+
+.card-header h3 {
+  margin: 0;
+  font-size: 18px;
+  color: #f00;
+}
+
+.card-header p {
+  margin: 5px 0;
+  font-size: 14px;
+  color: #666;
+}
+
+.card-body {
+  padding: 10px;
+}
+
+.Com-card-header {
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+  overflow: hidden; /* 텍스트가 벗어나지 않도록 설정 */
+}
+
+.Com-card-header p {
+  margin: 0;
+  font-size: 18px;
+  color: #f00;
+  font-weight: bold; /* 글자를 더 두껍게 설정 */
+  white-space: nowrap; /* 텍스트가 한 줄로 유지되도록 설정 */
+  text-overflow: ellipsis; /* 텍스트가 너무 길 경우 말줄임표(...)로 표시 */
+  overflow: hidden; /* 텍스트가 컨테이너를 벗어나지 않도록 설정 */
+}
+
+
+.gym-image {
+  width: 100%;
+  height: 200px;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+
+.tag {
+  background-color: #76c7c0;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 15px;
+  font-size: 12px;
+  display: inline-block;
+  margin: 10px 0;
+}
+
+.score {
+  font-size: 16px;
+  font-weight: bold;
+  color: #333;
+}
+
+
+/* ReservationForm */
+
+.reservation-form h2 {
+  margin-bottom: 20px;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+.button-group {
+  display: flex;
+  justify-content: space-between;
+}
+
+.next-button, .prev-button, .submit-button {
+  background-color: #f8f8f2;
+  color: rgb(31, 30, 30);
+  padding: 8px 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+
+.next-button:hover, .submit-button:hover {
+  background-color: #fdefe1;
+}
+
+.prev-button:hover {
+  background-color: #f0f0f0;
+}
+
+/* ConfirmationMessage */
+
+.confirmation-message {
+  background-color: #fcfbf1;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  width: 400px;
+  height: 400px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.confirmation-message h2 {
+  margin-bottom: 20px;
+}
+
+.reservation-info {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 10px 0;
+}
+
+.reservation-item {
+  background-color: #f8efde;
+  color: black;  
+}
+
+p {
+  margin: 10px 0;
+}
+
