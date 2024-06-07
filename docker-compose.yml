@@ -1,0 +1,28 @@
+version: '3.8'
+
+services:
+  db:
+    image: mysql:5.7
+    restart: always
+    environment:
+      MYSQL_DATABASE: "Climb"
+      MYSQL_USER: "maramuhly"
+      MYSQL_PASSWORD: "7310"
+      MYSQL_ROOT_PASSWORD: "climb"
+    ports:
+      - "3306:3306"
+    volumes:
+      - new_db_data:/var/lib/mysql
+
+  web:
+    build: .
+    restart: always
+    depends_on:
+      - db
+    environment:
+      DATABASE_URL: "mysql+pymysql://maramuhly:7310@db/Climb"
+    ports:
+      - "8000:8000"
+
+volumes:
+  new_db_data:
